@@ -1,5 +1,5 @@
 ### Parallel web scraping
-This small project is a training task for web scraping.
+This small project is a training task of a web scraping.
 
 #### Goal
 The script extracts names and prices of the Top-100 crypto coins and stores the data into a db. The task is quite contrived and serves mainly for study purpose considering the fact there are exhaustive sources containing both real-time and historical data across the internet.
