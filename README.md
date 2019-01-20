@@ -2,7 +2,7 @@
 This small project is a training task of a web scraping.
 
 #### Goal
-The script extracts names and prices of the Top-100 crypto coins and stores the data into a db. The task is quite contrived and serves mainly for study purpose considering the fact there are exhaustive sources containing both real-time and historical data across the internet.
+The script extracts names and prices of the Top-100 crypto coins and stores the data into a db. The task is quite contrived and serves mainly for study purpose. There are innumerous of mature sources containing both real-time and historical cryptocurrency data.
 
 ### Problems resolved in the project
 1. Multiple pages with one level nesting have been scraped. The propagation has been implemented by gathering internal links from the main page followed by looping on them.
