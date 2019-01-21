@@ -19,7 +19,7 @@ def parse_and_write(coins, proxies):
                 try:
                     coin_page = requests.get(url, proxies={"http": proxy, "https": proxy})
                     soup = BeautifulSoup(coin_page.content, "html.parser")
-                    price = soup.find(id="quote_price").span.text
+                    price = float(soup.find(id="quote_price").span.text)
                 except:
                     # Most free proxies will often get connection errors.
                     print("Skipping. Connnection error")
@@ -28,5 +28,5 @@ def parse_and_write(coins, proxies):
                 break
         with con:
             cur = con.cursor()
-            cur.execute("INSERT INTO Prices (Coin, Price) VALUES ('" + coin + "', '" + price + "');")
+            cur.execute("INSERT INTO Prices (Coin, Price) VALUES ('" + str(coin) + "', '" + str(price) + "');")
         con.commit()
