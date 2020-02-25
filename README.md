@@ -1,5 +1,5 @@
 ### Parallel web scraping
-This small project is a training task of a web scraping using python multithreading and real-time-updated list of available proxy servers.
+The project is a training task for web scraping using python multithreading and a real-time-updated list of available proxy servers.
 
 #### Goal
 The script extracts names and prices of the Top-100 crypto coins and stores the data into a db. 
