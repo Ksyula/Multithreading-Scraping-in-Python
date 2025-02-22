@@ -8,11 +8,11 @@ The script extracts names and prices of the Top-100 crypto coins and stores the 
 The task is quite contrived and serves mainly for study purpose. There are innumerous of mature sources containing both real-time and historical cryptocurrency data.
 
 ### Solved problems within the project
-1. Multiple pages with one level nesting have been scraped. The propagation has been implemented by gathering internal links from the main page followed by looping on them.
-2. To avoid getting banned from the remote server, a mechanism dealing with proxy servers was implemented.
-3. A free public proxy server is commonly assumed as unreliable in terms of availability. To overcome this issue:
-    - another scraping script extracts a list of free public proxy servers from a web site.
-    - with each launch of the script, the list of 10 proxy servers gets updated by currently available proxy servers.
-    - during the script execution, some proxy servers get unavailable. Thus, each scraping query goes through this list and searches for an alive proxy server to execute a query.
-4. To speed up the scraping of the total 101 web pages multithreading is involved. The work is divided among 4 threads running almost simultaneously.
-5. The extracted data is being written directly to a DataBase.
+* Multiple pages with single-level nesting have been scraped. Propagation is handled by collecting internal links from the main page and iterating through them.
+* To prevent bans from the remote server, a proxy management mechanism was implemented.
+* Since free public proxy servers are often unreliable, the following approach was used to address this issue:
+  - A separate scraping script extracts a list of free public proxy servers from a website.
+  - With each script execution, the list of 10 proxy servers is updated with currently available ones.
+  - During execution, some proxies may become unavailable. Each scraping request cycles through the list to find an active proxy before proceeding.
+* To accelerate the scraping of all 101 web pages, multithreading was utilized. The workload is distributed across four threads running concurrently.
+* The extracted data is written directly to a database.
